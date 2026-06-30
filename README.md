@@ -2,39 +2,61 @@
 
 ## Deskripsi
 
-Repository ini berisi implementasi Python pada Proyek Business Intelligence menggunakan **Global Pharmacy Sales Dataset (2020–2025)**.
+Repository ini berisi implementasi Python yang digunakan pada Proyek Business Intelligence menggunakan **Global Pharmacy Sales Dataset (2020–2025)**.
 
-Python digunakan sebagai bagian dari implementasi **Power BI** untuk melakukan:
-
-- Forecasting penjualan menggunakan **Exponential Smoothing**
-- Clustering persediaan menggunakan **K-Means**
-
-Metode ini sesuai dengan implementasi pada Fase 3 (Develop) proyek Business Intelligence.
+Implementasi Python dijalankan melalui **Python Visual pada Microsoft Power BI** untuk mendukung proses analisis data dan visualisasi dashboard.
 
 ---
 
 ## Dataset
 
-Dataset yang digunakan:
-
-**Global Pharmacy Sales Dataset (2020–2025)**
-
-Dataset berisi informasi mengenai:
-
-- Date
-- Region
-- Country
-- Category
-- Medicine
-- Age Group
-- Units Sold
-- Unit Price
-- Stock Level
-- Expiry Days Remaining
+Dataset yang digunakan adalah **Global Pharmacy Sales Dataset (2020–2025)** yang berisi data transaksi penjualan obat, stok, wilayah, kategori produk, serta informasi pelanggan.
 
 ---
 
-## Repository Structure
+## Metode Data Mining
+
+### 1. Forecasting
+
+Forecasting digunakan untuk memprediksi pendapatan (Revenue) pada periode berikutnya.
+
+Metode:
+
+- Holt-Winters Exponential Smoothing
+
+Library:
+
+- pandas
+- matplotlib
+- statsmodels
+
+Output:
+
+- Forecast Line Chart
+
+---
+
+### 2. Clustering
+
+Clustering digunakan untuk mengelompokkan kondisi persediaan obat berdasarkan stok dan sisa masa kedaluwarsa.
+
+Metode:
+
+- K-Means Clustering
+
+Library:
+
+- pandas
+- matplotlib
+- scikit-learn
+
+Output:
+
+- Scatter Plot Inventory Clustering Analysis
+
+---
+
+## Struktur Repository
 
 ```
 pharmacy-bi-python
@@ -45,8 +67,6 @@ pharmacy-bi-python
 ├── Clustering
 │   └── clustering.py
 │
-├── Global Pharmacy Sales 2020-2025.xlsx
-│
 ├── requirements.txt
 │
 └── README.md
@@ -54,54 +74,29 @@ pharmacy-bi-python
 
 ---
 
-## Forecasting
-
-Metode:
-
-- Exponential Smoothing
-
-Library:
-
-- pandas
-- statsmodels
-
-Output:
-
-- Forecast Revenue
-
----
-
-## Clustering
-
-Metode:
-
-- K-Means
-
-Library:
-
-- pandas
-- scikit-learn
-
-Output:
-
-- Inventory Clustering Analysis
-
----
-
 ## Software
 
-- Microsoft Power BI
+- Microsoft Power BI Desktop
 - Python
 - pandas
+- matplotlib
 - statsmodels
 - scikit-learn
 
 ---
 
-## Authors
+## Catatan
 
-Kelompok 02
+Seluruh script Python pada repository ini dijalankan menggunakan **Python Visual di Microsoft Power BI**.
 
-Business Intelligence
+Data diterima melalui objek `dataset` yang secara otomatis disediakan oleh Power BI sehingga script tidak memerlukan pembacaan file Excel atau CSV secara langsung.
+
+---
+
+## Kelompok 02
+
+Mata Kuliah Business Intelligence
+
+Program Studi Informatika
 
 Universitas Islam Indonesia
